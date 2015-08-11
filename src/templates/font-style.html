@@ -1,0 +1,18 @@
+<div class="inline-block">
+    <ol class="nya-bs-select inline" ng-model="font.font" data-live-search="true" size="15" title="Select font" >
+        <li nya-bs-option="option in fonts">
+            <span class="dropdown-header">{{$group}}</span>
+            <a>
+                <span><img src="" ng-src="{{thumb(option)}}" style="max-height: 32px" /></span>
+                <span class="small hidden">{{ option }}</span>
+                <span class="glyphicon glyphicon-ok check-mark"></span>
+            </a>
+        </li>
+    </ol>
+
+    <select class="form-control" style="display: inline; width: auto" ng-model="font.size" name="size" ng-options="item as item + ' pt' for item in fontSizes" ng-if="!hideFontSize">
+        <option value="">Font size</option>
+    </select>
+
+    <div color-picker ng-model="font.color" ng-if="!hideFontColor"></div>
+</div>
