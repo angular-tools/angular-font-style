@@ -1,0 +1,31 @@
+{
+  "name": "Angular font style chooser",
+  "authors": [
+    "minutephp <dev@minutephp.com>"
+  ],
+  "description": "Dead simple font style chooser using AngularJS",
+  "main": "src/js/font-style.js",
+  "keywords": [
+    "angularjs",
+    "font",
+    "selector"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.minutephp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "3141905e0e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3141905e0ea3ac773b1fe72a075a7c1b7a68c1da"
+  },
+  "_source": "git://github.com/angular-tools/angular-font-style.git",
+  "_target": "*",
+  "_originalSource": "angular-tools/angular-font-style"
+}
