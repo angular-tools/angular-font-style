@@ -1,10 +1,6 @@
 (function () {
     'use strict';
 
-    var scripts = document.getElementsByTagName("script");
-    var currentScriptPath = scripts[scripts.length - 1].src;
-    var basePath = currentScriptPath.substring(0, currentScriptPath.lastIndexOf('/') + 1) + '..';
-
     angular.module('angularFontStyles', ['nya.bootstrap.select', 'angularColorPicker'])
         .directive('fontStyle', ['$compile', '$timeout', '$http', function ($compile, $timeout, $http) {
             return {
@@ -12,7 +8,7 @@
                 replace: true,
                 require: 'ngModel',
                 scope: {font: '=', hideFontSize: '@', hideFontColor: '@', minFontSize: '@', maxFontSize: '@', fontSizeSkip: '@'},
-                templateUrl: basePath + '/templates/font-style.html',
+                templateUrl: '/static/bower_components/angular-font-style/src/templates/font-style.html',
                 link: function ($scope, element, attrs, ngModel) {
                     $scope.init = function () {
                         $scope.$watch('font', function () {
