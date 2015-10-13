@@ -33,7 +33,7 @@
                     var baseURL = 'http://www.swf2vid.com';
 
                     $scope.init = function () {
-                        $.getJSON(baseURL + '/api/fonts?type=list&callback=?', function (obj) {
+                        $.getJSON(baseURL + '/api/fonts?callback=?', function (obj) {
                             $timeout(function () { $scope.fonts = obj; });
                         });
 
@@ -45,7 +45,7 @@
                     };
 
                     $scope.thumb = function (item) {
-                        return baseURL + '/assets/fonts/thumbs/' + item + '.png';
+                        return baseURL + '/api/font/thumb/' + item;
                     };
 
                     $scope.init();
