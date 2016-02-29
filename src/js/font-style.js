@@ -30,11 +30,11 @@
                     };
                 },
                 controller: function ($scope, $element) {
-                    var baseURL = 'http://www.swf2vid.com';
-
                     $scope.init = function () {
-                        $.getJSON(baseURL + '/api/fonts?callback=?', function (obj) {
-                            $timeout(function () { $scope.fonts = obj; });
+                        $.getJSON('/bgtracks/fonts?callback=?', function (obj) {
+                            var names = [];
+                            angular.forEach(obj, function (v, k) {names.push(v.name);});
+                            $timeout(function () { $scope.fonts = names; });
                         });
 
                         $scope.fontSizes = [];
@@ -45,7 +45,7 @@
                     };
 
                     $scope.thumb = function (item) {
-                        return baseURL + '/api/font/thumb/' + item;
+                        return '/bgtracks/font/thumb/' + item;
                     };
 
                     $scope.init();
