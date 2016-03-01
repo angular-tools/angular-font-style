@@ -45,7 +45,7 @@
                     };
 
                     $scope.thumb = function (item) {
-                        return '/bgtracks/font/thumb/' + item;
+                        return '/bgtracks/fonts/thumbs/' + item + '.png';
                     };
 
                     $scope.init();
